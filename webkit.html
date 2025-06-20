@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar Example</title>
+    <style>
+        /* Style the entire scrollbar */
+        ::-webkit-scrollbar {
+            width: 1px; /* Width of vertical scrollbar */
+            height: 2px; /* Height of horizontal scrollbar */
+        }
+
+        /* Style the scrollbar track (background) */
+        ::-webkit-scrollbar-track {
+            background: #ff0f0f; /* Light gray background */
+            border-radius: 10px;
+        }
+
+        /* Style the scrollbar thumb (draggable part) */
+        ::-webkit-scrollbar-thumb {
+            background: #f71a1a; /* Dark gray */
+            border-radius: 10px;
+        }
+
+        /* Change thumb color when hovered */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e41010;
+        }
+
+        /* Container for content */
+        .content {
+            width: 80%;
+            height: 300px;
+            overflow-y: scroll; /* Enable vertical scrolling */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Custom Scrollbar Example</h2>
+
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor est at ligula ultrices, nec convallis eros faucibus. Integer sagittis dictum nulla, sed feugiat lorem pulvinar et.</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in nunc a magna interdum tincidunt id vel turpis.</p>
+        <p>Aenean ullamcorper sapien non libero facilisis, a dictum ligula posuere. Nullam facilisis lorem id libero venenatis, nec malesuada eros malesuada.</p>
+        <p>Phasellus finibus arcu in ligula auctor, at volutpat mauris gravida. Duis vel ultricies enim. Donec consequat fringilla libero, ut tincidunt arcu faucibus nec.</p>
+        <p>Nam scelerisque fermentum dui, at molestie nunc interdum id. Etiam at neque nec mi dictum accumsan.</p>
+        <p>Donec consectetur massa non diam sagittis, nec tincidunt orci ultrices. Suspendisse in feugiat felis.</p>
+        <p>Integer in nulla at justo sodales vehicula. Aliquam erat volutpat. Suspendisse potenti.</p>
+        <p>Sed in massa a odio tempus viverra. Cras sollicitudin dui nec lectus ultrices, vel blandit ex sagittis.</p>
+        <p>Ut vel pharetra libero, at dapibus ex. Mauris suscipit nulla sit amet nisl cursus fermentum.</p>
+    </div>
+
+</body>
+</html>
+
+<div class="review">
+    <div class="customer-one">
+    <img src="#" alt="our customer says" width="50px">
+    <p>still there is nothing says our customer</p>
+    </div>
+    <div class="customer-two">
+        <img src="$" alt="our customer says" width="50px">
+        <p>still there is nothing says our customer</p>
+        </div>
+        <div class="customer-three">
+            <img src="$" alt="our customer says">
+            <p>still there is nothing says our customer</p>
+            </div>
+ 
+
+            <!--this is input field which fill out by our customer -->
+            <div class="feedback">
+               <textarea id="feedback" rows="10" cols="10" placeholder="we are here seeking your comment..."> 
+               </textarea>
+                <input type="checkbox">
+                <p>rate</p>
+                <button class="submit" id="submit">submit</button>
+            </div>
+</div>

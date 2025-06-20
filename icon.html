@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .list-benefit {
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-benefit li {
+            opacity: 0;
+            transform: translateX(-100%);
+            padding: 10px;
+            margin: 10px 0;
+            background: #6b3232;
+            border-radius: 5px;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Animation */
+        @keyframes moveIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Delay each list item for a cascading effect */
+        .list-benefit li:nth-child(1) { animation: moveIn 1s ease-in forwards; animation-delay: 0.2s; }
+        .list-benefit li:nth-child(2) { animation: moveIn 1s ease-in forwards; animation-delay: 0.4s; }
+        .list-benefit li:nth-child(3) { animation: moveIn 1s ease-in forwards; animation-delay: 0.6s; }
+        .list-benefit li:nth-child(4) { animation: moveIn 1s ease-in forwards; animation-delay: 0.8s; }
+        .list-benefit li:nth-child(5) { animation: moveIn 1s ease-in forwards; animation-delay: 1s; }
+        .list-benefit li:nth-child(6) { animation: moveIn 1s ease-in forwards; animation-delay: 1.2s; }
+        .list-benefit li:nth-child(7) { animation: moveIn 1s ease-in forwards; animation-delay: 1.4s; }
+        .list-benefit li:nth-child(8) { animation: moveIn 1s ease-in forwards; animation-delay: 1.6s; }
+        .list-benefit li:nth-child(9) { animation: moveIn 1s ease-in forwards; animation-delay: 1.8s; }
+        .list-benefit li:nth-child(10) { animation: moveIn 1s ease-in forwards; animation-delay: 2s; }
+
+    </style>
+</head>
+<body>
+
+    <h2>Benefits of Staying at Hatsey Kaleb Hotel</h2>
+
+    <ul class="list-benefit">
+        <li>Spacious and comfortable rooms</li>
+        <li>High-speed WiFi for business and leisure</li>
+        <li>Well-equipped meeting and event halls</li>
+        <li>24/7 security for a safe stay</li>
+        <li>Authentic Ethiopian cuisine and coffee</li>
+        <li>Friendly and professional staff</li>
+        <li>Easy access to local attractions</li>
+        <li>Peaceful and relaxing environment</li>
+        <li>Affordable rates with premium services</li>
+        <li>Exclusive discounts for long stays</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Container for the entire gallery */
+        .gallery-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        /* Styling for the scrolling gallery */
+        .gallery {
+            width: 300px;
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width:thin; /* Hide scrollbar for Firefox */
+        }
+
+        /* Hide scrollbar for Chrome, Edge, and Safari */
+        .gallery::-webkit-scrollbar {
+            display:none;
+        }
+
+        /* Image container inside gallery */
+        .gallery div {
+            display: flex;  /* Change from grid to flex for horizontal scrolling */
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Image styling */
+        .gallery img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Button styles */
+        #backbtn, #nextbtn {
+            width: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-wrap">
+        <!-- Left Scroll Button -->
+        <img src="move-left.png" id="backbtn" alt="Back">
+        
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <div>
+                <img src="images.jpg" alt="Image 1">
+                <img src="images.jpg" alt="Image 2">
+                <img src="images.jpg" alt="Image 3">
+                <img src="images.jpg" alt="Image 4">
+                <img src="images.jpg" alt="Image 5">
+                <img src="images.jpg" alt="Image 6">
+            </div>
+        </div>
+
+        <!-- Right Scroll Button -->
+        <img src="move-right.png" id="nextbtn" alt="Next">
+    </div>
+
+    <script>
+        let galleryContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backbtn");
+        let nextBtn = document.getElementById("nextbtn");
+        let scrollAmount = 150; // Adjust scroll step size
+
+        // Enable mouse wheel horizontal scrolling
+        galleryContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            galleryContainer.scrollLeft += evt.deltaY;
+        });
+
+        // Scroll left button
+        backBtn.addEventListener("click", () => {
+            galleryContainer.scrollLeft -= scrollAmount; // Moves left
+        });
+
+        // Scroll right button
+        nextBtn.addEventListener("click", () => {
+            galleryContainer.scrollLeft += scrollAmount; // Moves right
+        });
+    </script>
+
+</body>
+</html>

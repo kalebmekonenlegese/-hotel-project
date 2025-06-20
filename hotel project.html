@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hatsey kaleb hotel website</title>
+  
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        box-sizing: border-box;
+
+         
+        }
+        .container {
+    display: grid;
+    grid-template-columns: 10% 40% 30% 19%;
+    grid-template-rows:auto auto auto auto minmax(1100px, auto) auto auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+        "lang logo nav register"
+        "offering offering offering offering"
+        "head head head head"
+        "banner banner banner banner"
+        "story story story story"
+        "why why why why"
+        "room room room room"
+        "service service service service"
+        "review review review review"
+        "gallery gallery gallery gallery"
+        "event event event event"
+        "special special special special"
+        "faq faq faq faq"
+        "contact contact contact contact"
+        "footer footer footer footer"; 
+    gap: 0px;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+        }
+    .grid-item {
+    margin: 0;
+    padding: 0;
+}
+
+      /* Reset all margin and padding */
+
+
+/* Lang Dropdown (Sticky) */
+.lang {
+    grid-area: lang;
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+   width: 100%;
+   z-index: 1000;
+   margin-left: 0px;
+  
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: flex;
+   position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 1000;
+}
+
+/* Dropdown List */
+.dropdown-list {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    transition: opacity 0.5s linear;
+    z-index: 1000;
+
+}
+
+/* Dropdown List Links */
+.dropdown-list a {
+    display: flex;
+    padding: 10px 14px;
+    width: 150px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.dropdown-list a:hover {
+    background-color: antiquewhite;
+}
+
+.dropdown:hover .dropdown-list {
+    visibility: visible;
+    opacity: 1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Logo (Fixed) */
+
+.icon{
+        display: inline-block;
+        animation: change 1s infinite;
+       }
+      @keyframes change {
+        0%, 100% {transform: translateY(0px);}
+        50%{transform: translateY(5px);}
+        
+      }
+
+       .logo{
+        grid-area: logo;
+        background-color: rgb(0, 0, 0);
+        position:sticky ;
+        top: 0;
+      z-index: 999;
+        
+        
+       }
+       .logo img{
+        display: flex;
+       transform: translateX(200px);
+       width: 100px;
+       }
+/* Navigation Bar (Sticky) */
+.nav {
+    grid-area: nav;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+    width: 100%;
+}
+
+.nav a {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    transition: border-bottom 0.4s ease;
+}
+
+.nav a:hover {
+    display: block;
+    border-bottom: 1px solid rgb(241, 188, 11);
+}
+
+/* Register Section (Sticky) */
+.register {
+    grid-area: register;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register button {
+    width: 45%;
+    height: 45%;
+    border: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.2s ease-in;
+}
+
+.register button:hover {
+    background-color: rgb(241, 188, 11);
+}
+
+
+       
+       .offering{
+        grid-area: offering;
+        background-color: rgb(59, 87, 8);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: black;
+     z-index: 1;
+       }
+       .offering a{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: white;
+        font-weight: bold;
+        border-bottom: 1px solid black;
+        transition: border-bottom 0.4s ease;
+        padding-bottom: 5px;
+       }
+       .offering a:hover{
+        border-bottom: 1px solid rgb(241, 188, 11);
+       }
+       .head{
+        grid-area: head;
+        background-color: rgb(31, 122, 138);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:9px ;
+        background-image: linear-gradient(to bottom right, black,rgb(19, 19, 19));
+
+       }
+       .title{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        font-style:normal ;
+        text-align:center ;
+        text-transform:uppercase ;
+        text-shadow:1px 1px 3px 2px ;
+        color: white;
+    
+       }
+       .subtitle{
+        font-family:Georgia, 'Times New Roman', Times, serif ;
+        font-size:1rem ;
+        font-weight:bold ;
+        font-style:normal ;
+        text-align:center ;
+        text-transform:capitalize ;
+        text-shadow:1px 1px 3px 2px ;
+        color: white;
+        padding-top: 20px;
+       }
+    
+       .banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black; /* Ensures no empty spaces */
+}
+
+.banner .picture {
+    transform: translateX(0%); /* Start off-screen */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform 2s ease-in-out, opacity 1s ease-in-out;
+}
+ 
+.show {
+    transform: translateX(100%);  /* Bring the image back into view */
+    opacity: 1;
+    z-index: 1;
+}
+
+.hide {
+    transform: translateX(100%); /* Move the image off-screen */
+    opacity: 0;
+    z-index: 0;
+}
+
+
+
+       .story{
+        grid-area: story;
+      gap: 0;
+       background-color: black;
+    padding-bottom: 100px;
+  
+       }
+       
+       .story .journey{
+        display: flex;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        transform: translateX(80px); 
+        padding: 100px 50px 0px;
+        color: rgb(255, 255, 255);
+       
+       }
+       .story .behind{
+        display: flex;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2rem ;
+        font-weight:bold ;
+       transform: translateX(80px);
+        color: rgb(255, 255, 255);
+
+       }
+       .story .fullstory{
+        display: block;
+        width: 60%;
+        overflow: hidden;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.3rem ;
+        font-weight:bold ;
+        padding: 100px 30px 20px;
+    word-spacing: 5px;
+    color:orange;
+       }
+     
+    .our{
+        display: block;
+        width: 400px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        position: relative;
+        float: right;
+        top: -350px;
+      right: 120px;
+       
+    }
+    .external {
+         position: relative;
+         display: block;
+         width: 500px;
+         border: none;
+         outline: none;
+         border-radius: 5px;
+         top: 0px;
+         padding-left: 60px;
+         padding-bottom: 80px;
+    }
+    .substory{
+        display: block;
+        width: 50%;
+        overflow: hidden;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.3rem ;
+        font-weight:bold ;
+        word-spacing: 5px;
+        color:orange;
+       float: right;
+       transform: translate(350px, 200px);
+
+   
+
+    }
+       
+    
+       .why{
+        display: grid;
+        grid-template-columns:60% 40% ;
+        grid-template-rows:auto ;
+        grid-template-areas: 
+        "why-we why-we"
+        "why-subtitle list-benefit";
+        grid-area: why;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 100%;
+        margin-top: -7.95px;
+     
+        
+       }  
+        .why-we{
+            grid-area: why-we;
+            display: flex;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        transform: translateX(80px); 
+        padding: 100px 0px 0px;
+        color: rgb(255, 255, 255);
+        position: relative;
+        text-align: center;
+       
+       }
+        .why-subtitle{
+            grid-area: why-subtitle;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        text-align: center;
+        overflow: hidden;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.6rem ;
+        font-weight:bold ;
+      padding: 100px 30px 20px;
+      word-spacing: 5px;
+      color: white;
+       }
+       .list-benefit{
+       grid-area: list-benefit;
+       padding: 50px 50px 50px;
+       animation: appear 10s ease-in-out 1s infinite forwards ;
+       color: rgb(255, 255, 255);
+  
+       }
+     
+       
+       .list-benefit .list li
+       {
+        padding-bottom: 15px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.02rem ;
+        font-weight:bold ;
+        list-style-type:none;
+        color: white;
+       list-style: none;
+     
+      
+       }
+
+        
+       .list-benefit .list li lord-icon{
+      transform: translateY(10px);
+       color: white;
+       }
+
+     
+       .room{
+        grid-area: room;
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-template-rows:1fr 2fr 1fr 2fr 1fr;
+        grid-template-areas:
+        "disc-room disc-room" 
+       "room-one room-two" 
+       "equal-one equal-two"
+       "room-three room-four"
+       "equal-three equal-four";
+     position: relative; 
+        
+       }
+        .disc-room {
+            grid-area: disc-room;
+            position: relative;
+            text-align: center;
+            color: white;
+         padding: 50px 0px 50px;
+         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        text-transform: capitalize;
+}
+       .room-one{
+        grid-area: room-one;
+       align-items: center;
+      display: flex;
+      justify-content: center;
+      
+       }
+       .room-one img{
+        border-radius: 10px;
+        width: 500px;
+        transition: width 0.2s ease-out;
+       }  
+       .room-one img:hover{
+        opacity: 0.7;
+    
+       }
+       .equal-one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 75px;
+       }
+       .equal-one h3 a{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        display: block;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: white;
+      padding-bottom: 5px;
+        border-bottom: none;
+        transition: border-bottom 0.4s ease;
+       }
+       .equal-one h3 a:hover{
+        display: block;
+        border-bottom: 1px solid rgb(241, 188, 11);
+       }
+
+       .room-two{
+        grid-area: room-two;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+       }
+       .room-two img{
+        border-radius: 10px;
+        width: 500px;
+        transition: width 0.2s ease-out;
+       }  
+       .room-two img:hover{
+        opacity: 0.7;
+   
+       }
+       .equal-two{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 75px;
+       }
+       .equal-two h3 a{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+        transition: border-bottom 0.4s ease;
+       }
+       .equal-two h3 a:hover{
+        display: block;
+        border-bottom: 1px solid rgb(241, 188, 11);
+       }
+     
+       
+       .room-three{
+        grid-area: room-three;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+       }
+       .room-three img{
+        border-radius: 10px;
+        width: 500px;
+        transition: width 0.2s ease-out;
+       }  
+       .room-three img:hover{
+        opacity: 0.7;
+      
+       }
+       .equal-three{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 75px;
+       }
+       .equal-three h3 a{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+        transition: border-bottom 0.4s ease;
+       }
+       .equal-three h3 a:hover{
+        display: block;
+        border-bottom: 1px solid rgb(241, 188, 11);
+       }
+
+       .room-four{
+        grid-area: room-four;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+       
+       }
+       .room-four img{
+        border-radius: 10px;
+        width: 500px;
+        transition: width 0.2s ease-out;
+       }  
+       .room-four img:hover{
+        opacity: 0.7;
+       
+       }
+       .equal-four{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 75px;
+       }
+       .equal-four h3 a{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: white;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        transition: border-bottom 0.4s ease;
+       }
+       .equal-four h3 a:hover{
+        display: block;
+        
+        border-bottom: 1px solid rgb(241, 188, 11);
+       }     
+
+       
+       .service{
+        grid-area: service;
+        background-color: rgb(0, 0, 0);
+        animation: see 2s ease;
+        animation-timeline: view();
+        animation-range:entry 0% cover 40%;
+        display: grid;
+        grid-template-columns:auto ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "service-head service-head"
+        "conf conf-head "
+        "rest rest-head"
+        "eve eve-head "
+        "dine dine-head";
+        padding: 50px;
+        color: white;
+       }
+       .service-head{
+        grid-area: service-head;
+            display: flex;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.5rem ;
+        font-weight:bold ;
+        color:white;
+        position: relative;
+        text-align: center;
+      justify-content: center;
+      padding-bottom: 40px;
+       }
+
+       .conf{
+        grid-area: conf;
+        position: relative;
+        display: flex;
+        justify-content:center ;
+        align-self: center;
+        padding-bottom: 50px;
+
+       }
+       .conf img{
+        border-radius: 10px;
+       }
+       .conf img:hover{
+        opacity: 0.7;
+       }
+       .conf-head{
+        grid-area: conf-head;
+        position: relative;
+        display: block;
+       }
+       .conf-head h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        color:white;
+        text-align: center;
+      justify-content: center;
+     text-transform: capitalize;
+
+       }
+       .conf-head button{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        pointer-events: cursor;
+    }
+       .conf-head .more-a{
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        color:rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:1.4rem ;
+        font-weight:bold ;
+        text-align: center;
+        outline: none;
+        border: none;
+       background-color: black;
+       transition: background-color 1s ease, color 1s ease;
+   
+      
+    }
+         .conf-head .more-a:hover{
+        background-color: rgb(241, 188, 11);
+        color: black;
+       
+
+         }
+
+       .rest{
+        grid-area: rest;
+        display: flex;
+        justify-content:center ;
+        align-self: center;
+        padding-bottom: 50px;
+       
+       }
+       .rest img{
+        border-radius: 10px;
+       }
+       .rest img:hover{
+        opacity: 0.7;
+       }
+       .rest-head{
+        grid-area: rest-head;
+        position: relative;
+        display: block;
+       }
+       .rest-head h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        color:white;
+        text-align: center;
+      justify-content: center;
+     text-transform: capitalize;
+
+       }
+       .rest-head button{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        pointer-events: cursor;
+    }
+       .rest-head .more-b{
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        color:rgb(255, 255, 255);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.4rem ;
+        font-weight:bold ;
+        text-align: center;
+        outline: none;
+        border: none;
+       background-color: black;
+       transition: background-color 1s ease, color 1s ease;
+    }
+         .rest-head .more-b:hover{
+        background-color: rgb(241, 188, 11);
+        color: black;
+          
+
+         }
+
+     
+
+       .eve{
+        grid-area: eve;
+        display: flex;
+        justify-content:center ;
+        align-self: center;
+        padding-bottom: 50px;
+    
+       }
+       .eve img{
+        border-radius: 10px;
+       }
+       .eve img:hover{
+        opacity: 0.7;
+       }
+       .eve-head{
+        grid-area: eve-head;
+        display: block;
+       position: relative;
+       }
+       .eve-head h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        color:white;
+        text-align: center;
+      justify-content: center;
+     text-transform: capitalize;
+
+       }
+       .eve-head button{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        pointer-events: cursor;
+    }
+       .eve-head .more-c{
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        color:rgb(255, 255, 255);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.4rem ;
+        font-weight:bold ;
+        text-align: center;
+        outline: none;
+        border: none;
+       background-color: black;
+       transition: background-color 1s ease, color 1s ease;
+    }
+         .eve-head .more-c:hover{
+        background-color: rgb(241, 188, 11);
+        color: black;
+          
+
+         }
+
+       .dine{
+        grid-area: dine;
+        display: flex;
+        justify-content:center ;
+        align-self: center;
+        padding-bottom: 50px;
+      
+       }
+      .dine img{
+        border-radius: 10px;
+      }
+      .dine img:hover{
+        opacity: 0.7;
+      }
+       .dine-head{
+        grid-area:dine-head;
+        display: block;
+        position: relative;
+       } 
+       .dine-head h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:2.5rem ;
+        font-weight:bold ;
+        color:white;
+        text-align: center;
+      justify-content: center;
+     text-transform: capitalize;
+
+       }
+       .dine-head button{
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        pointer-events: cursor;
+    }
+       .dine-head .more-d{
+        width: 300px;
+        height: 60px;
+        border-radius: 20px;
+        color:rgb(255, 255, 255);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1.4rem ;
+        font-weight:bold ;
+        text-align: center;
+        outline: none;
+        border: none;
+       background-color: black;
+       transition: background-color 1s ease, color 1s ease;
+    }
+         .dine-head .more-d:hover{
+        background-color: rgb(241, 188, 11);
+        color: black;
+          
+
+         }
+    
+         .service .discription-service{
+            width: 600px;
+        padding-top: 40px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+        font-size:1rem ;
+        font-weight:bold ;
+        color:white;
+        text-align: center;
+      justify-content: center;
+     text-transform: capitalize;
+       }
+
+
+       .review{
+        grid-area: review;
+        background-color: rgb(45, 55, 184);
+       }
+
+
+
+
+
+
+       .gallery{
+        grid-area: gallery;
+        background-color: rgb(112, 111, 30);
+       }
+       .event{
+        grid-area: event;
+        background-color: rgb(226, 131, 43);
+       }
+       .special{
+        grid-area: special;
+        background-color: rgb(226, 43, 43);
+       }
+       .faq{
+        grid-area: faq;
+        background-color: rgb(129, 103, 129);
+       }
+       .contact{
+        grid-area: contact;
+        background-color: rgba(223, 226, 43, 0.678);
+       }
+       .footer{
+        grid-area: footer;
+        background-color: rgb(65, 66, 66);
+       }
+
+  
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <!--this is for the register.-->
+        <div class="register">
+           <button class="sign-in" id="in">sign up</button>
+           <button class="sign-up" id="up">sign in</button>
+        </div>
+
+
+        <!--this is the navigation bar-->
+        <div class="nav">
+            <a href="#">home</a>
+            <a href="#">gallery</a>
+            <a href="#">about us</a>
+            <a href="#">contact us</a>
+        </div>
+
+
+         <!--this is for multipe language-->
+        <div class="lang">
+            <div class="dropdown">
+                <h3 class="lang">lang <span class="icon">⌵</span></h3>
+                <div class="dropdown-list">
+                    <a href="?lang=en">🇬🇧 English</a>
+                    <a href="?lang=am">🇪🇹 አማርኛ</a>
+                    <a href="?lang=ti">🇪🇹 ትግርኛ</a>
+                    <a href="?lang=fr">🇫🇷 Français</a>
+                    <a href="?lang=es">🇪🇸 Español</a>
+                    <a href="?lang=de">🇩🇪 Deutsch</a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--this is for logo-->
+        <div class="logo">
+            <img src="luxury-wings-logo-with-k-letter-elegant-gold-vector-34680952.jpg" alt="hotel logo" width="50px">
+        </div>
+
+        <!--this is the service that can you access from the hotel.-->
+        <div class="offering">
+            <a href="$">dining</a>
+            <a href="$">rooms</a>
+            <a href="$">restuarant</a>
+            <a href="$">hall rental</a>
+            <a href="$">events</a>
+            <a href="$">Facilities</a>
+            <a href="$">promotion</a>
+            <a href="$">FAQ</a>
+        </div>
+         
+        <!--this is the main page of the hotel.-->
+        <div class="head">
+            <h1 class="title">hatsey kaleb hotel</h1>
+            <h3 class="subtitle">Where Every Guest is Treated Like Family.</h3>
+        </div>
+
+        <!--this is a banner for the hotel.-->
+
+      <div class="banner">
+            <img src="1624350445-meeting-management-conferencehall-14.avif" alt="banner1" class="picture">
+            <img src="luxury-classic-modern-bedroom-suite-hotel_105762-1787.avif" alt="banner2" class="picture">
+            <img src="2023_Hotel_Normann_05.jpg" alt="banner3"  class="picture">
+            <img src="how-to-deliver-5-star-customer-service-tips-for-hospitality-leaders-index.jpg" alt="banner4" class="picture">
+            <img src="Heiligengrabe,_Kloster_Stift_zum_Heiligengrabe,_Abtei,_Speiseraum_--_2017_--_7082-8.jpg" alt="banner5" class="picture">
+            <img src="full-shot-man-carrying-baggage_23-2149963942.avif" alt="banner6" class="picture">
+            <img src="empty-car-parking-lot-with-green-hedge-tree-fence-parking-zone-on-sunny-summer-day-and-empty-space-outdoor-car-parking-lot-with-concrete-floor-eco-friendly-outside-parking-lot-modern-architecture-photo.JPG" alt="banner7" class="picture">
+            <img src="AF-HED000020.jpg" alt="banner8" class="picture">
+      
+        </div>
+      
+
+        <!--this is call to action-->
+        <div class="call">
+            <button type="button" id="call" class="buttoncall">book now!</button>
+        </div>
+           
+        <!--this is the story of hatsey kaleb hotel-->
+        <div class="story">
+            <h1 class="journey">Our Journey </h1>
+            <h2 class="behind">The Story Behind Hatsey Kaleb Hotel</h2>
+            <h5 class="fullstory">
+                Hatsey Kaleb Hotel is a family-owned establishment founded with a simple mission: to create a space where travelers feel at home while experiencing the warmth and culture of Tigray, Ethiopia. With 20 comfortable rooms, a restaurant serving local delicacies, and versatile conference facilities, we offer more than just a place to stay; we offer a place where you belong.
+
+                We blend tradition with modern comfort, providing exceptional service, a welcoming atmosphere, and personalized experiences for every guest. Whether for business, a cultural experience, or a peaceful getaway, Hatsey Kaleb Hotel promises a memorable stay.
+                
+                Welcome to Hatsey Kaleb Hotel—where comfort, culture, and hospitality come together.</h5>
+                
+          <div>
+            <img src="63ff2a_98e2e368bfae4ce1b1c9c4d60c6915bd~mv2.avif" alt="our hotel" class="our">
+            <h5 class="substory">
+                Hatsey Kaleb Hotel is dedicated to providing a welcoming and professional experience for guests. We specialize in hosting meetings, congresses, and events while ensuring comfort, security, and quality service. Our goal is to create a seamless stay with hospitality that reflects the warmth of Tigray.
+            </h5>
+            <img src="qClkSiB78LGJcll-v8HeGdEW.jpg" alt=" hotel" class="external">
+          </div>
+          <hr>
+         <!--this is for the customer why you choose hatsey kaleb hotel.-->
+         <div class="why">
+
+            <div class="why-we">
+                <h1>Why Choose Hatsey Kaleb Hotel?</h1>
+            </div>
+
+           <div class="why-subtitle">
+            <h5>At Hatsey Kaleb Hotel, we offer more than just a place to stay—we provide a welcoming and comfortable experience for business travelers, event organizers, and leisure guests. With modern amenities, spacious meeting halls, high-speed WiFi, and dedicated service, we make every stay seamless and productive. Whether you’re here for a conference, a relaxing retreat, or to explore the rich culture of Tigray, our serene environment, delicious cuisine, and warm Ethiopian hospitality ensure a memorable visit. Your comfort and security are our top priorities, making Hatsey Kaleb Hotel the perfect choice for a truly enjoyable stay.</h5>
+            </div>
+
+            
+               
+               
+             
+         
+               
+                 <!--this is the list of benefit-->
+                 <div class="list-benefit">
+                    <ul class="list">
+
+                            <li  class="a">
+                           
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/bstjqmfc.json"
+                                    trigger="loop-on-hover"
+                                    style="width:50px;">
+                                </lord-icon>
+                            Free High-Speed Wi-Fi</li>
+
+
+                        <li  class="b">
+                           
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ycykppwj.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Standby Power</li>
+
+
+                          <li  class="c">
+                            
+                            <lord-icon
+                                src="https://cdn.lordicon.com/drdusbzu.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Modern Conference Facilities (LCD Access)</li>
+                        
+
+                        <li  class="d">                  
+                            <lord-icon
+                                src="https://cdn.lordicon.com/cuksbukj.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                        </lord-icon>
+                            Complimentary Tea and Coffee Every Morning</li>
+
+
+                        <li  class="e">                       
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ojgowmvw.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Free Secure Parking</li>
+                        
+
+                        <li  class="f">               
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ilttnvct.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Free TV and DStv Access</li>
+
+
+                        <li  class="g">
+                           
+                            <lord-icon
+                                src="https://cdn.lordicon.com/twpfmtiv.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                      Punctuality and Timely Service</li>
+
+
+                        <li  class="h">             
+                            <lord-icon
+                                src="https://cdn.lordicon.com/kvabjivl.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Personalized Customer Care</li>
+
+
+                        <li  class="i">                        
+                            <lord-icon
+                                src="https://cdn.lordicon.com/cydywpjk.json"
+                                trigger="loop-on-hover"
+                                delay="0"
+                                style="width:50px;">
+                            </lord-icon>
+                            Comfortable, Well-Appointed Rooms</li>
+
+
+                        <li  class="j">                         
+                            <lord-icon
+                            src="https://cdn.lordicon.com/mzcaikdp.json"
+                            trigger="loop-on-hover"
+                            style="width:50px;">
+                        </lord-icon>                                     
+                            24/7 Security Cameras</li>
+
+
+                        <li  class="ico">                                                 
+                          
+                            <lord-icon
+                                src="https://cdn.lordicon.com/rpvomrgr.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;">
+                            </lord-icon>
+                            Room Service</li>
+
+
+                        <li  class="ico">                         
+                            <lord-icon
+                                src="https://cdn.lordicon.com/itysowyb.json"
+                                trigger="loop-on-hover"
+                                style="width:50px;height:50px">
+                            </lord-icon>                             
+               Sustainability Initiatives</li>
+                      </ul>
+                 </div>
+               
+                </div>
+         <hr>
+              <!--this is for room types-->
+            
+              <div class="room">
+                <h2 class="disc-room">rooms</h2>
+
+                <div class="room-one">
+                    <a href="$"> <img src="room-types-in-a-hotel-10.jpg" alt="1"  width="500px"></a>
+                </div>
+                <div class="equal-one">
+                    <h3><a href="*">room type</a></h3>
+                </div>
+                <!---->
+                <div class="room-two">      
+                   <a href="$"><img src="317502313(1).jpg" alt="2"  width="500px"></a> 
+                </div>
+                <div class="equal-two">
+                    <h3><a href="*">room type</a></h3>
+                </div>
+                  <!---->
+                <div class="room-three">           
+                    <a href="$"><img src="Single-Room-(2).jpg" alt="3"  width="500px"></a>
+                </div>
+                <div class="equal-three">
+                    <h3><a href="*">room type</a></h3>
+                </div>
+                  <!---->
+                <div class="room-four">         
+                    <a href="$"> <img src="unnamed(1).jpg" alt="4"  width="500px"></a> 
+                </div>
+                <div class="equal-four">
+                    <h3><a href="*">room type</a></h3>
+                </div>
+              </div>
+              <hr>
+                <!--this is for services offering.-->
+         
+                <div class="service">
+                      <!---->
+                 <div class="service-head">
+                  <h1>special service</h1>
+                 </div>
+                    <div class="conf">
+                  <a href=" $"> <img src="tttt.jpg" alt="conference room"  width="500px"></a> 
+                  
+                </div>
+                    <div class="conf-head">
+                        <h3>conference room</h3>
+                        <p class="discription-service">
+                            A spacious and well-furnished hall designed for meetings, workshops, and business gatherings. Equipped with modern audiovisual systems, high-speed internet, and comfortable seating, it ensures a professional and productive environment for corporate events.
+                        </p>     
+                    <button class="more-a" id="more-a">more detail</button>
+                </div>
+               
+
+                <!---->
+                    <div class="rest">
+                    <a href=" #"> <img src="dsc_2645.jpg" alt="resturant"  width="500px"></a>   
+                      
+                    </div>
+                        <div class="rest-head">
+                            <h3>resturant</h3>
+                            <p class="discription-service">
+                                A stylish and inviting dining area offering a variety of local and international cuisines. With a relaxing ambiance, excellent service, and carefully curated menus, it provides a delightful culinary experience for guests.
+                            </p>
+                            <button class="more-b" id="more-b">more detail</button>
+                        </div> 
+                
+                    <!---->
+                    <div class="eve">
+                     <a href=" #">  <img src="corporate-event-2-1024x577.png" alt="events"  width="500px"></a> 
+                        
+                    </div>
+                        <div class="eve-head">
+                            <h3>events</h3>
+                            <p class="discription-service">
+                                A large, open space ideal for hosting grand celebrations, weddings, concerts, and outdoor gatherings. With ample seating arrangements, customizable décor, and natural surroundings, it creates the perfect setting for memorable events.
+                            </p>
+                            <button class="more-c" id="more-c">more detail</button>
+                        </div>
+                   
+                    <!---->
+                    <div class="dine">           
+                    <a href=" #"><img src="beautifully-plated-fish-dish-white-plate-fine-dining-restaurant_1022970-53736.avif" alt="conf" width="500px"></a>
+                       
+                    </div>
+                        <div class="dine-head">
+                            <h3>dining</h3>
+                            <p class="discription-service">
+                                A private and elegant space designed for intimate dining experiences. Whether for romantic dinners, family gatherings, or executive meals, it offers a cozy atmosphere, personalized service, and a refined menu to enhance the occasion.
+                            <button class="more-d" id="more-d">more detail</button>
+                        </div>
+                      
+                </div>
+                  
+                <!--this is for customer review.-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+                
+                <!--this is for the whole page of gallery-->
+                <div class="gallery">
+            
+                    <img src="#" alt="images">
+                    <img src="#" alt="image">
+                    <img src="$" alt="image">
+                    <img src="@" alt="image">
+                    <img src="%" alt="image">
+                    <img src="^" alt="image">
+                    <img src="&" alt="image">
+                </div>
+
+                <!--this is for some special event.-->
+                <div class="event">
+                    <h2>meeting</h2>
+                        <p>Hatsey Kaleb Hotel offers spacious halls for meetings, conferences, and events, complete with modern amenities, catering, and flexible setups to suit any occasion</p>
+                       
+                        <div class="meeting-small">
+                            <img src="@" alt="5">
+                            <h3>meeting</h3>
+                            <button>more detail</button>
+                        </div>
+
+                      <div class="big">
+                            <img src="@" alt="6">
+                                <button>more detail</button>
+                         </div>                  
+                    </div>
+       
+
+                <!--this is for the special offering-->
+
+                <div class="special">
+
+                   <div class="special-one">          
+                    <img src="@" alt="1">
+                    <h2>Cultural Experiences</h2>
+                    <p>Delight in authentic Ethiopian traditions with a coffee ceremony, local dishes, and live music, creating a memorable cultural immersion.</p>
+                    <button>book now</button>  
+                </div>
+
+                   <div class="special-two">
+                    <img src="" alt="">
+                    <h2>event service</h2>
+                    <p>Host your meetings, weddings, or conferences in our versatile halls with catering, decorations, and state-of-the-art equipment included</p>
+                 <button>book now</button>
+                </div>
+
+                   <div class="special-three">
+                    <img src="" alt="">
+                    <h2>Relaxation and Recreation</h2>
+                    <p>Unwind with special discounts for long stays, rooftop lounges with stunning views, and rejuvenating wellness services.</p>
+                    <button>book now</button>  
+                </div>
+
+                   <div class="special-four">
+                    <img src="" alt="">
+                    <h2>Local Tours and Guidance</h2>
+                    <p>Explore the beauty of Ethiopia with organized tours, expert local guides, and trips to nearby historical and cultural landmarks</p>
+                    <button>book now</button>  
+                </div>
+
+                </div>
+
+                <!--this is for faq-->
+                <div class="faq">
+                  <p>What time is check-in and check-out? <a href="$">more</a> </p>  
+                  <p>Is breakfast included in my stay? <a href="$">more</a> </p>  
+                  <p>Do you offer free Wi-Fi? <a href="$">more</a> </p>  
+                  <p>Can I book an event or meeting room? <a href="$">more</a> </p>  
+                  <p>Do you offer airport shuttle services? <a href="$">more</a> </p>   
+                </div>
+                
+                <!--this is also for contact-->
+              <div class="contact">
+                 
+                <div class="social">
+                    <a href="!">telegram</a>
+                    <a href="@">instagram</a>
+                    <a href="#">facebook</a>
+                    <a href="$">google business</a>
+                    <a href="%">tripadvisor</a>
+                </div>
+
+                <div class="clear">
+                    <p>address <a href="#">abiy adi</a></p>
+                    <p>phone<a href="#">+251914754143</a></p>
+                    <p>email<a href="%">kalebmekonen.kb@gmail.com</a></p>
+                </div>
+                
+                <div class="map">
+                    <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1938.7614646008913!2d38.9940929!3d13.6259237!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x166bb50048666b4d%3A0x556aeaa31ca9c392!2sHastey%20kaleb%20hotel!5e0!3m2!1sen!2set!4v1737983015791!5m2!1sen!2set"
+                         width="400" height="300"
+                          style="border:0;"
+                           allowfullscreen=""
+                           loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe></p>
+                </div>
+             
+
+                <div class="live">
+                    <button>live chat</button>
+                </div>
+
+              <div class="quick">
+                <h3>quick links </h3>
+                <ul>
+                    <li><a href="$">home</a></li>
+                   <li> <a href="%">room rates</a></li>
+                   <li> <a href="^">gallery</a></li>
+                    <li><a href="^">about us</a></li>
+                    </ul>
+              </div>
+               
+              <div class="legal">
+               <h3>legal</h3>
+               <ul>
+                <li><a href="#">privacy policy</a></li>
+               <li><a href="$">terms & conditions</a></li>
+               <li><a href="%">cookie policy</a></li>
+              <li><a href="^">cancellation policy</a></li>
+            <li> <a href="@">payment policy</a></li>
+               </ul>
+              </div>
+               
+
+              <div class="oprate">
+                <h3>opration</h3>
+                <ul>
+                    <li>    <a href="$">check-in/ check-out policy</a></li>
+                    <li> <a href="#">services & amenities</a></li>
+                    <li> <a href="#">event spaces</a></li>
+                    <li><a href="#">loyalty program</a></li>
+                    <li> <a href="@">accessibility features</a></li>
+                    <li> <a href="@">customer reviews</a></li>
+                </ul>
+              </div>
+                
+              <div class="help">
+                <h3>help</h3>
+                    <ul>
+                        <li><a href="">help center</a></li>
+                        <li><a href="">contact information</a></li>
+                        <li><a href="">booking assistance</a></li>
+                        <li><a href="">FAQ</a></li>
+                      
+                    </ul>
+              </div>
+ 
+              <!--this is for footer-->
+
+              <div class="footer">
+                &#169; 2025   hatsey kaleb hotel.  all right deserve.
+              </div>
+
+
+              <!--now we are gonna pass to jave script function-->
+              <script>
+         (async () => {
+    const pictures = document.querySelectorAll(".picture");
+    let index = 0;
+
+    function showPicture() {
+        pictures.forEach((picture, i) => {
+            picture.classList.remove("show", "hide");
+            if (i === index) {
+                picture.classList.add("show");
+            } else {
+                picture.classList.add("hide");
+            }
+        });
+
+        index = (index + 1) % pictures.length; // Loop to next image
+    }
+
+    // Set an initial delay before starting the slideshow to allow transitions to work
+    setTimeout(() => {
+        showPicture();  // Show the first image
+        setInterval(showPicture, 3000); // Change image every 3 seconds
+    }, 100); // Delay of 100ms
+})();
+
+</script>
+
+                           
+                        
+                                
+</body>
+</html>
